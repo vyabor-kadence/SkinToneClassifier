@@ -235,7 +235,7 @@ def detect_skin_in_color(image):
     img = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
     # Defining skin Thresholds
-    low_hsv = np.array([0, 48, 80], dtype=np.uint8)
+    low_hsv = np.array([0, 15, 0], dtype=np.uint8)
     high_hsv = np.array([20, 255, 255], dtype=np.uint8)
 
     skin_mask = cv2.inRange(img, low_hsv, high_hsv)
